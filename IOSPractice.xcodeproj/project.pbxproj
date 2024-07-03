@@ -13,8 +13,8 @@
 		F35D5FD22C355C4B00A54A82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35D5FD02C355C4B00A54A82 /* Main.storyboard */; };
 		F35D5FD42C355C4C00A54A82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35D5FD32C355C4C00A54A82 /* Assets.xcassets */; };
 		F35D5FD72C355C4C00A54A82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35D5FD52C355C4C00A54A82 /* LaunchScreen.storyboard */; };
-		F35D5FE12C355E7200A54A82 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35D5FE02C355E7200A54A82 /* PagingCollectionViewLayout.swift */; };
 		F35D5FE42C355EA300A54A82 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F35D5FE32C355EA300A54A82 /* SnapKit */; };
+		F35D5FE62C35622400A54A82 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35D5FE52C35622400A54A82 /* PagingCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		F35D5FD32C355C4C00A54A82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F35D5FD62C355C4C00A54A82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F35D5FD82C355C4C00A54A82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F35D5FE02C355E7200A54A82 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewLayout.swift; path = ../../PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
+		F35D5FE52C35622400A54A82 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewLayout.swift; path = ../../../Downloads/PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 				F35D5FDF2C355DBE00A54A82 /* Application */,
 				F35D5FDE2C355DB300A54A82 /* Resources */,
 				F35D5FCE2C355C4B00A54A82 /* ViewController.swift */,
-				F35D5FE02C355E7200A54A82 /* PagingCollectionViewLayout.swift */,
+				F35D5FE52C35622400A54A82 /* PagingCollectionViewLayout.swift */,
 				F35D5FD02C355C4B00A54A82 /* Main.storyboard */,
 			);
 			path = IOSPractice;
@@ -165,7 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F35D5FE12C355E7200A54A82 /* PagingCollectionViewLayout.swift in Sources */,
+				F35D5FE62C35622400A54A82 /* PagingCollectionViewLayout.swift in Sources */,
 				F35D5FCF2C355C4B00A54A82 /* ViewController.swift in Sources */,
 				F35D5FCB2C355C4B00A54A82 /* AppDelegate.swift in Sources */,
 				F35D5FCD2C355C4B00A54A82 /* SceneDelegate.swift in Sources */,
