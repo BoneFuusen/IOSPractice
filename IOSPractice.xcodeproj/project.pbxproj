@@ -13,6 +13,8 @@
 		F35D5FD22C355C4B00A54A82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35D5FD02C355C4B00A54A82 /* Main.storyboard */; };
 		F35D5FD42C355C4C00A54A82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35D5FD32C355C4C00A54A82 /* Assets.xcassets */; };
 		F35D5FD72C355C4C00A54A82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35D5FD52C355C4C00A54A82 /* LaunchScreen.storyboard */; };
+		F35D5FE12C355E7200A54A82 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35D5FE02C355E7200A54A82 /* PagingCollectionViewLayout.swift */; };
+		F35D5FE42C355EA300A54A82 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F35D5FE32C355EA300A54A82 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		F35D5FD32C355C4C00A54A82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F35D5FD62C355C4C00A54A82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F35D5FD82C355C4C00A54A82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F35D5FE02C355E7200A54A82 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewLayout.swift; path = ../../PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35D5FE42C355EA300A54A82 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +60,32 @@
 		F35D5FC92C355C4B00A54A82 /* IOSPractice */ = {
 			isa = PBXGroup;
 			children = (
-				F35D5FCA2C355C4B00A54A82 /* AppDelegate.swift */,
-				F35D5FCC2C355C4B00A54A82 /* SceneDelegate.swift */,
+				F35D5FDF2C355DBE00A54A82 /* Application */,
+				F35D5FDE2C355DB300A54A82 /* Resources */,
 				F35D5FCE2C355C4B00A54A82 /* ViewController.swift */,
+				F35D5FE02C355E7200A54A82 /* PagingCollectionViewLayout.swift */,
 				F35D5FD02C355C4B00A54A82 /* Main.storyboard */,
+			);
+			path = IOSPractice;
+			sourceTree = "<group>";
+		};
+		F35D5FDE2C355DB300A54A82 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				F35D5FD32C355C4C00A54A82 /* Assets.xcassets */,
 				F35D5FD52C355C4C00A54A82 /* LaunchScreen.storyboard */,
 				F35D5FD82C355C4C00A54A82 /* Info.plist */,
 			);
-			path = IOSPractice;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F35D5FDF2C355DBE00A54A82 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F35D5FCC2C355C4B00A54A82 /* SceneDelegate.swift */,
+				F35D5FCA2C355C4B00A54A82 /* AppDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +104,9 @@
 			dependencies = (
 			);
 			name = IOSPractice;
+			packageProductDependencies = (
+				F35D5FE32C355EA300A54A82 /* SnapKit */,
+			);
 			productName = IOSPractice;
 			productReference = F35D5FC72C355C4B00A54A82 /* IOSPractice.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +135,9 @@
 				Base,
 			);
 			mainGroup = F35D5FBE2C355C4B00A54A82;
+			packageReferences = (
+				F35D5FE22C355EA300A54A82 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F35D5FC82C355C4B00A54A82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35D5FE12C355E7200A54A82 /* PagingCollectionViewLayout.swift in Sources */,
 				F35D5FCF2C355C4B00A54A82 /* ViewController.swift in Sources */,
 				F35D5FCB2C355C4B00A54A82 /* AppDelegate.swift in Sources */,
 				F35D5FCD2C355C4B00A54A82 /* SceneDelegate.swift in Sources */,
@@ -297,8 +325,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +334,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Me.IOSPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -324,8 +355,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +364,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Me.IOSPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -361,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F35D5FE22C355EA300A54A82 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F35D5FE32C355EA300A54A82 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F35D5FE22C355EA300A54A82 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F35D5FBF2C355C4B00A54A82 /* Project object */;
 }
