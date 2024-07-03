@@ -60,6 +60,7 @@
 		F35D5FC92C355C4B00A54A82 /* IOSPractice */ = {
 			isa = PBXGroup;
 			children = (
+				F35D5FD82C355C4C00A54A82 /* Info.plist */,
 				F35D5FDF2C355DBE00A54A82 /* Application */,
 				F35D5FDE2C355DB300A54A82 /* Resources */,
 				F35D5FCE2C355C4B00A54A82 /* ViewController.swift */,
@@ -74,7 +75,6 @@
 			children = (
 				F35D5FD32C355C4C00A54A82 /* Assets.xcassets */,
 				F35D5FD52C355C4C00A54A82 /* LaunchScreen.storyboard */,
-				F35D5FD82C355C4C00A54A82 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
