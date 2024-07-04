@@ -44,6 +44,12 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         cell.backgroundColor = .black
         cell.layer.cornerRadius = 10
         
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowRadius = 5.0
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.shadowOffset = CGSize(width: 4, height: 4)
+        cell.layer.masksToBounds = false
+        
         return cell
     }
     
@@ -59,7 +65,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.decelerationRate = .fast
         collectionView.dataSource = self
-        collectionView.backgroundColor = UIColor(red: 0.168627, green: 0.152, blue: 0.168627, alpha: 1.0)
+        collectionView.backgroundColor = .clear
         collectionView.contentInset = UIEdgeInsets(top: 0, left:0, bottom:0, right: 0)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellID)
         
@@ -82,7 +88,6 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         return labelView
     }()
     
-    
     func setupCollectionUI() {
         self.view.addSubview(self.collectionView)
         
@@ -96,6 +101,17 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     func setupBackgroundUI() {
         let myView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         myView.backgroundColor =  UIColor(red: 0.168627, green: 0.152, blue: 0.168627, alpha: 1.0)
+        
+        let gradient = CAGradientLayer()
+        
+        gradient.frame = CGRect(x: 100, y: 425, width: 350, height: 800)
+        gradient.colors = [UIColor(red: 0.6, green: 0.0823, blue: 0.09412, alpha: 1.0).cgColor, UIColor(red: 0.580392, green: 0.078431, blue: 0.09803921, alpha: 1.0).cgColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+        
+        gradient.transform = CATransform3DMakeRotation(CGFloat.pi / 4.1, 0, 0, 1)
+        
+        myView.layer.addSublayer(gradient)
         
         self.view.addSubview(myView)
     }
