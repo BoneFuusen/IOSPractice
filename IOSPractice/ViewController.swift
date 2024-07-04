@@ -11,6 +11,7 @@ import SnapKit
 class ViewController: UIViewController, UICollectionViewDataSource {
     
     let images = [UIImage(named: "ironman")?.withRoundedCorners(radius: 10), UIImage(named: "spiderman")?.withRoundedCorners(radius: 10), UIImage(named: "deadpool")?.withRoundedCorners(radius: 10)]
+    let names = ["Iron Man", "Spiderman", "Deadpool"]
     let cellID = "cellID"
     
     let cellWidth = (5/6) * UIScreen.main.bounds.width
@@ -32,7 +33,14 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         imageView.image = image
         imageView.contentMode = .scaleAspectFill
         
+        let name = names[indexPath.item]
+        let nameView = UILabel(frame:.init(x: 25, y: 500, width: cellWidth, height: logoHeight + 50))
+        nameView.text = name
+        nameView.font = UIFont(name: "ArialRoundedMTBold", size: 34)
+        nameView.textColor = .white
+        
         cell.addSubview(imageView)
+        cell.addSubview(nameView)
         cell.backgroundColor = .black
         cell.layer.cornerRadius = 10
         
