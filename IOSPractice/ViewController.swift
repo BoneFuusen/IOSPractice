@@ -15,8 +15,11 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     
     let cellWidth = (5/6) * UIScreen.main.bounds.width
     let cellHeight = (275/399) * UIScreen.main.bounds.height
-    let spacing = (1/8) * UIScreen.main.bounds.width
-    let cellSpacing = (1/9) * UIScreen.main.bounds.width
+    let spacing = (1/12) * UIScreen.main.bounds.width
+    let cellSpacing = (1/16) * UIScreen.main.bounds.width
+    
+    let logoWidth = (16/45) * UIScreen.main.bounds.width
+    let logoHeight = (9/266) * UIScreen.main.bounds.height
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
@@ -30,7 +33,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         imageView.contentMode = .scaleAspectFill
         
         cell.addSubview(imageView)
-        cell.backgroundColor = .gray
+        cell.backgroundColor = .black
         cell.layer.cornerRadius = 10
         
         return cell
@@ -55,19 +58,54 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         return collectionView
     }()
     
-    override func viewDidLoad() {
+    lazy var logoView : UIImageView = {
+        let logoView = UIImageView(frame:.init(x: UIScreen.main.bounds.width/3.05, y: 75, width: logoWidth, height: logoHeight))
+        logoView.image = UIImage(named: "logo")
         
-        let myView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        myView.backgroundColor =  UIColor(red: 0.168627, green: 0.152, blue: 0.168627, alpha: 1.0)
+        return logoView
+    }()
+    
+    lazy var labelView : UILabel = {
+        let labelView = UILabel(frame: .init(x: UIScreen.main.bounds.width/5.5, y: 75, width: 360, height: 175))
+        labelView.text = "Choose your hero"
+        labelView.font = UIFont(name: "ArialRoundedMTBold", size: 30)
+        labelView.textColor = .white
         
-        self.view.addSubview(myView)
+        return labelView
+    }()
+    
+    
+    func setupCollectionUI() {
         self.view.addSubview(self.collectionView)
         
         self.collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         self.collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        self.collectionView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        self.collectionView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 75).isActive = true
         self.collectionView.heightAnchor.constraint(equalToConstant: cellHeight).isActive = true
         self.collectionView.widthAnchor.constraint(equalToConstant: cellWidth).isActive = true
+    }
+    
+    func setupBackgroundUI() {
+        let myView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        myView.backgroundColor =  UIColor(red: 0.168627, green: 0.152, blue: 0.168627, alpha: 1.0)
+        
+        self.view.addSubview(myView)
+    }
+    
+    func setupLogoUI() {
+        self.view.addSubview(logoView)
+    }
+    
+    func setupLabelUI(){
+        self.view.addSubview(labelView)
+    }
+    
+    override func viewDidLoad() {
+        setupBackgroundUI()
+        setupCollectionUI()
+        setupLogoUI()
+        setupLabelUI()
+        
     }
 }
 
